@@ -152,6 +152,13 @@ views: views
 foo:
   bar:
     test: true
+    buzz:
+      a:
+        - a
+        - b
+      b:
+        - a
+        - b
   baz: 1000
 ```
 
@@ -162,7 +169,13 @@ views: dist/views
 foo:
   bar:
     test: false
-    buzz: 8
+    buzz:
+      a:
+        - c
+        - d
+      c:
+        - x
+        - y
   fizz: 5
 ```
 
@@ -174,10 +187,15 @@ Final object
   foo: {
     bar: {
       test: false,
-      buzz: 8
+      buzz: {
+        a: ['a', 'b', 'c', 'd'],
+        b: ['a', 'b'],
+        c: ['x', 'y']
+      }
     },
     baz: 1000,
     fizz: 5
   }
 }
+
 ```

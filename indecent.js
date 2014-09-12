@@ -50,7 +50,9 @@ module.exports = (function () {
     overrideConfig = null;
   }
   if (overrideConfig) {
-    _.merge(config, overrideConfig);
+    _.merge(config, overrideConfig, function (a, b) {
+      return _.isArray(a) ? _.uniq(a.concat(b)) : undefined;
+    });
   }
 
   // return the final config
