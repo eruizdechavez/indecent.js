@@ -1,6 +1,6 @@
 {
   "name": "indecent",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "An indecently opinionated YAML configuration loader.",
   "keywords": [
     "configuration",
